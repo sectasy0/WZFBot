@@ -24,6 +24,8 @@ class Fun(commands.Cog):
         command = ctx.message
         await command.delete()
         await ctx.send(msg)
+
+    # API IS BROKEN!!
     """
     @commands.command(aliases=['ciekawostka'])
     async def funfact(self, ctx):
