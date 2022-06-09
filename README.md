@@ -1,1 +1,1 @@
-Usage: python main.py bot_token
+Usage: python main.py
