@@ -29,12 +29,10 @@ async def reload_cogs(ctx, cog: str = 'all'):
     if cog == 'all':
         for file in os.listdir('cogs'):
             if file.endswith('.py'):
-                bot.unload_extension(f'cogs.{file[:-3]}')
-                bot.load_extension(f'cogs.{file[:-3]}')
+                bot.reload_extension(f'cogs.{file[:-3]}')
                 await ctx.send(f'Cog **cogs.{file[:-3]}** reloaded!')
     else:
-        bot.unload_extension(cog)
-        bot.load_extension(cog)
+        bot.reload_extension(cog)
         await ctx.send(f'Cog **{cog}** reloaded!')
 
 bot.run(input("Enter Bot token: "))
